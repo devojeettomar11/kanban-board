@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dynamic Kanban Board</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+    <h1>Kanban Board</h1>
+
+    <form id="task-form">
+        <input type="text" id="task-title" placeholder="Task Title" required />
+        <input type="text" id="task-desc" placeholder="Task Description" required />
+        <button type="submit">Add Task</button>
+    </form>
+
+    <div class="board">
+        <div class="column" data-status="todo">
+            <h2>To Do</h2>
+            <div class="task-container" id="todo"></div>
+        </div>
+        <div class="column" data-status="in-progress">
+            <h2>In Progress</h2>
+            <div class="task-container" id="in-progress"></div>
+        </div>
+        <div class="column" data-status="done">
+            <h2>Done</h2>
+            <div class="task-container" id="done"></div>
+        </div>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
